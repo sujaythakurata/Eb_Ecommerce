@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import Fallback from "./pages/fallback/FallBack";
-import { Home } from "./pages/Home";
+import Fallback from "../pages/fallback/FallBack";
+import { Home } from "./Home";
 
 
 function App() {

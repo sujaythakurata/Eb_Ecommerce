@@ -18,7 +18,7 @@ const initialState:IProduct = {
 const getProducts = createAsyncThunk( "product/getProduct", async (type:string)=> {
   try{
       let url;
-      if(type !== "All") url = "https://fakestoreapi.com/products";
+      if(type === "All") url = "https://fakestoreapi.com/products";
       else url = "https://fakestoreapi.com/products/categories/"+type;
       const products = await axios.get(url);
       return {products: products.data, type:type};
@@ -39,9 +39,8 @@ export const productSlice = createSlice({
   extraReducers:(builder)=>{
     builder.addCase(getProducts.fulfilled, (state, action)=>{
       state.status = "success";
-      console.log(action);
-      // state.products.push(...action.payload.products);
-      // state.type = action.type;
+      state.products = action.payload.products;
+      state.type = action.payload.type;
     })
     .addCase(getProducts.pending, (state, action)=>{
       state.status = "loading";

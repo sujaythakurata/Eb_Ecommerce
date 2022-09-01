@@ -1,7 +1,7 @@
 
 import { Outlet } from "react-router-dom";
 import Header from "../../components/header/Header";
-import ErrorComponent from "../ErrorComponent";
+import ErrorComponent from "../../components/ErrorComponent";
 import "./main.scss"
 
 const Main = ()=>{
