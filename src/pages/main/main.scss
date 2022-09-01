@@ -1,0 +1,16 @@
+.grid-container{
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  overflow-y: auto;
+  grid: 10% 90%/ auto;
+  .header{
+    grid-area: 1 / span 2;
+    width: 100%;
+  }
+  .main-content{
+    grid-area: 2/span 2;
+    width: 100%;
+  }
+}
+
