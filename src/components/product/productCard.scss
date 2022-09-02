@@ -1,0 +1,45 @@
+
+@mixin flex-display($val) {
+  display: flex;
+  justify-content: $val;
+}
+.img-body{
+  height: 60%;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
+.title{
+  height: 20%;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info, .buy-btn{
+  height: 10%;
+}
+.product-card{
+  height: 450px;
+  width: 300px;
+  margin:10px;
+
+  .card-body{
+    height: 100%;
+    @include flex-display(space-between);
+    flex-direction: column;
+    .info{
+      @include flex-display(space-between);
+    }
+  }
+
+  .buy-btn{
+    @include flex-display(center);
+  }
+}
+.price, .rate{
+  span{
+    font-weight: bold;
+  }
+}
