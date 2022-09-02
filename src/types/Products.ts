@@ -6,5 +6,6 @@ export interface Products{
   image:string,
   price:number,
   rating:{rate:number, count:number},
-  title:string
+  title:string,
+  quntity:number
 }
