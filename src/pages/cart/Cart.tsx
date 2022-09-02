@@ -10,7 +10,7 @@ export default function Cart(){
   const totalProduct = useAppSelector(state=>state.cart.totalProduct);
   return(
     <div className="cart-content">
-      <table className="table table-bordered">
+      <table className="table table-bordered table-responsive-sm able-responsive-md able-responsive-lg">
         <thead>
           <tr>
             <th>#</th>
@@ -37,14 +37,14 @@ export default function Cart(){
             })
           }
         </tbody>
-        <tfoot className="bg-light">
-          <tr>
+        <tfoot>
+          <tr className="table-dark">
             <td></td>
             <td></td>
             <td></td>
             <td>{totalProduct}</td>
-            <td className="text-right text-danger">Total</td>
-            <td colSpan={2} className="text-right text-danger">{totalPrice.toFixed(2)}</td>
+            <td className="text-right">Total</td>
+            <td colSpan={2} className="text-right">{totalPrice.toFixed(2)}</td>
           </tr>
         </tfoot>
       </table>
