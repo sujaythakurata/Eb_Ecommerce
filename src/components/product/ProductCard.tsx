@@ -7,7 +7,7 @@ export default function ProductCard(props:Products){
     <div className="product-card card">
       <div className="card-body">
         <div className="img-body">
-          <img src={props.image} alt="img" />
+          <img src={props.image} alt={props.title} />
         </div>
         <div className="title text-center">
           {props.title}
